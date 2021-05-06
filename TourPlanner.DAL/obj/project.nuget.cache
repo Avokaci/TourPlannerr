@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "p6S1uZCFrHGoUf/TMv3CRLM74NCI+9REK8q0D4VSl/OF194/z3u7OmzUMmqF2dvDLUkzbHTTAccXtgccV+3Bqg==",
+  "dgSpecHash": "YXZVQlvavFuuLU4qM84za07SdQv+MfiEZMVhAI+mczu4HpFth1XkMjhLgMPUQhqgM3ShjGkbamIpqKon8wTHtg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\burak_y46me01\\source\\repos\\TourPlanner.DAL\\TourPlanner.DAL.csproj",
+  "projectFilePath": "C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerr\\TourPlanner.DAL\\TourPlanner.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\burak_y46me01\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\burak_y46me01\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

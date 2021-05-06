@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\burak_y46me01\\source\\repos\\TourPlanner.Models\\TourPlanner.Models.csproj",
+      "projectUniqueName": "C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerr\\TourPlanner.Models\\TourPlanner.Models.csproj",
       "projectName": "TourPlanner.Models",
-      "projectPath": "C:\\Users\\burak_y46me01\\source\\repos\\TourPlanner.Models\\TourPlanner.Models.csproj",
+      "projectPath": "C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerr\\TourPlanner.Models\\TourPlanner.Models.csproj",
       "packagesPath": "C:\\Users\\burak_y46me01\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\burak_y46me01\\source\\repos\\TourPlanner.Models\\obj\\",
+      "outputPath": "C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerr\\TourPlanner.Models\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\burak_y46me01\\AppData\\Roaming\\NuGet\\NuGet.Config",

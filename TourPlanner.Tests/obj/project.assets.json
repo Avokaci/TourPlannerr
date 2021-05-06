@@ -4628,11 +4628,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\burak_y46me01\\source\\repos\\TourPlanner.Tests\\TourPlanner.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerr\\TourPlanner.Tests\\TourPlanner.Tests.csproj",
       "projectName": "TourPlanner.Tests",
-      "projectPath": "C:\\Users\\burak_y46me01\\source\\repos\\TourPlanner.Tests\\TourPlanner.Tests.csproj",
+      "projectPath": "C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerr\\TourPlanner.Tests\\TourPlanner.Tests.csproj",
       "packagesPath": "C:\\Users\\burak_y46me01\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\burak_y46me01\\source\\repos\\TourPlanner.Tests\\obj\\",
+      "outputPath": "C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerr\\TourPlanner.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\burak_y46me01\\AppData\\Roaming\\NuGet\\NuGet.Config",

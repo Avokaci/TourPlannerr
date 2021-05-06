@@ -30,12 +30,13 @@
                 <TextBlock Grid.Column="1" Grid.Row="1" FontSize="16" Text="Add a new Tour:"/>
                 <Label Grid.Column="1" Grid.Row="2" Margin="10">Name:</Label>
                 <TextBox Grid.Column="2" Grid.Row="2" Margin="10" Text="{Binding TourName}"/>
-                <Label Grid.Column="1" Grid.Row="3" Margin="10">Route:</Label>
-                <TextBox Grid.Column="2" Grid.Row="3" Margin="10" Text="{Binding RouteText}"/>
-                <Label Grid.Column="1" Grid.Row="4" Margin="10">Description:</Label>
-                <TextBox Grid.Column="2" Grid.Row="4" Margin="10" Text="{Binding DescriptionText}"/>
-                <Label Grid.Column="1" Grid.Row="5" Margin="10">Distance:</Label>
-                <TextBox Grid.Column="2" Grid.Row="5" Margin="10" Text="{Binding DistanceText}"/>
+                <Label Grid.Column="1" Grid.Row="3" Margin="10">From:</Label>
+                <TextBox Grid.Column="2" Grid.Row="3" Margin="10" Text="{Binding From}"/>
+                <Label Grid.Column="1" Grid.Row="4" Margin="10">To:</Label>
+                <TextBox Grid.Column="2" Grid.Row="4" Margin="10" Text="{Binding To}"/>
+                <Label Grid.Column="1" Grid.Row="5" Margin="10">Description:</Label>
+                <TextBox Grid.Column="2" Grid.Row="5" Margin="10" Text="{Binding DescriptionText}"/>
+
                 <Button Grid.Column="1" Grid.Row="6" Command="{Binding AddCommand}" Grid.ColumnSpan="2" Margin="40" Grid.RowSpan="2">Add</Button>
             </Grid>
         </StackPanel>

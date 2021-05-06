@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\burak_y46me01\\source\\repos\\TourPlanner.DAL\\TourPlanner.DAL.csproj": {}
+    "C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerr\\TourPlanner.DAL\\TourPlanner.DAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\burak_y46me01\\source\\repos\\TourPlanner.DAL\\TourPlanner.DAL.csproj": {
+    "C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerr\\TourPlanner.DAL\\TourPlanner.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\burak_y46me01\\source\\repos\\TourPlanner.DAL\\TourPlanner.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerr\\TourPlanner.DAL\\TourPlanner.DAL.csproj",
         "projectName": "TourPlanner.DAL",
-        "projectPath": "C:\\Users\\burak_y46me01\\source\\repos\\TourPlanner.DAL\\TourPlanner.DAL.csproj",
+        "projectPath": "C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerr\\TourPlanner.DAL\\TourPlanner.DAL.csproj",
         "packagesPath": "C:\\Users\\burak_y46me01\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\burak_y46me01\\source\\repos\\TourPlanner.DAL\\obj\\",
+        "outputPath": "C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerr\\TourPlanner.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\burak_y46me01\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,8 +27,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\burak_y46me01\\source\\repos\\TourPlanner.Models\\TourPlanner.Models.csproj": {
-                "projectPath": "C:\\Users\\burak_y46me01\\source\\repos\\TourPlanner.Models\\TourPlanner.Models.csproj"
+              "C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerr\\TourPlanner.Models\\TourPlanner.Models.csproj": {
+                "projectPath": "C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerr\\TourPlanner.Models\\TourPlanner.Models.csproj"
               }
             }
           }
@@ -63,14 +63,14 @@
         }
       }
     },
-    "C:\\Users\\burak_y46me01\\source\\repos\\TourPlanner.Models\\TourPlanner.Models.csproj": {
+    "C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerr\\TourPlanner.Models\\TourPlanner.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\burak_y46me01\\source\\repos\\TourPlanner.Models\\TourPlanner.Models.csproj",
+        "projectUniqueName": "C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerr\\TourPlanner.Models\\TourPlanner.Models.csproj",
         "projectName": "TourPlanner.Models",
-        "projectPath": "C:\\Users\\burak_y46me01\\source\\repos\\TourPlanner.Models\\TourPlanner.Models.csproj",
+        "projectPath": "C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerr\\TourPlanner.Models\\TourPlanner.Models.csproj",
         "packagesPath": "C:\\Users\\burak_y46me01\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\burak_y46me01\\source\\repos\\TourPlanner.Models\\obj\\",
+        "outputPath": "C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerr\\TourPlanner.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\burak_y46me01\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -9,10 +9,10 @@ using TourPlanner.Models;
 namespace TourPlanner.BL
 {
 
-    public class TourFactoryImpl : ITourFactory
+    internal class TourFactoryImpl : ITourFactory
     {
-        private TourItemDAO databaseTourItemDAO;
-        private TourItemDAO filesystemTourItemDAO;
+        private TourItemDAO databaseTourItemDAO = new TourItemDAO(DataType.Database);
+        private TourItemDAO filesystemTourItemDAO = new TourItemDAO(DataType.Filesystem);
 
         public TourFactoryImpl()
         {
@@ -20,27 +20,48 @@ namespace TourPlanner.BL
             filesystemTourItemDAO = new TourItemDAO(DataType.Filesystem);
         }
 
-
-        public void AddTour(string tourName, string route, string description, long distance)
+        public void AddLog(string tourName, DateTime date, DateTime duration, long distance, string comment)
         {
-            //WIP
-            //string imagePath = filesystemTourItemDAO.CreateImage(description);
-            databaseTourItemDAO.AddItem(tourName, route, description, distance);
+            databaseTourItemDAO.AddLog(tourName, date, duration, distance, comment);
         }
 
-        public void ChangeTour(string tourName, string route, string description, long distance)
+        public void AddTour(string name, string from, string to, string description, string imagePath)
         {
-            //databaseTourItemDAO.ChangeItem(tourName, route, description, distance);
+            string path = filesystemTourItemDAO.CreateImage(from, to, imagePath);
+            databaseTourItemDAO.AddTour(name, from, to, description, imagePath);
         }
 
-        public void DeleteTour(string tourName)
+        public void DeleteImages(string path)
         {
-            databaseTourItemDAO.DeleteItem(tourName);
+            filesystemTourItemDAO.DeleteImage(path);
+        }
+
+        public void DeleteItemAndSavePath(string tourName, string path)
+        {
+            filesystemTourItemDAO.SaveImagePath(path);
+            databaseTourItemDAO.DeleteTour(tourName);
+        }
+
+       
+
+        public void DeleteLog(string tourName)
+        {
+            databaseTourItemDAO.DeleteLog(tourName);
         }
 
         public IEnumerable<Tour> GetItems()
         {
             return databaseTourItemDAO.GetItems();
+        }
+
+        public List<TourLog> GetLogs(string tourName)
+        {
+            return databaseTourItemDAO.GetLogs(tourName);
+        }
+
+        public void ModifyTour(Tour currentTour, string name, string from, string to, string description, string imagePath)
+        {
+            databaseTourItemDAO.ModifyTour(currentTour, name,from,to,description,imagePath);
         }
 
         public IEnumerable<Tour> Search(string itemName, bool caseSensitive = false)
@@ -53,5 +74,7 @@ namespace TourPlanner.BL
             }
             return items.Where(x => x.Name.ToLower().Contains(itemName.ToLower()));
         }
+
+       
     }
 }

@@ -7,15 +7,11 @@ using System.Windows.Input;
 
 namespace TourPlanner.ViewModels
 {
-    //problem:  this does not allow me to have a different logic to my 
-    //CanExecute or Execute. For each command I would need to implement a 
-    //new class. To solve that problem there is the RelayCommandimplementation
-    //that is a command that can be instantiated passing the actions to be executed as in the following:
-    //inspiration link: https://www.c-sharpcorner.com/UploadFile/20c06b/icommand-and-relaycommand-in-wpf/
+   
     public class RelayCommand : ICommand
     {
-        private Action<object> execute;
-        private Func<object, bool> canExecute;
+        private Action<object> executeAction;
+        private Func<object, bool> canExecutePredicate;
 
         public event EventHandler CanExecuteChanged
         {
@@ -25,18 +21,22 @@ namespace TourPlanner.ViewModels
 
         public RelayCommand(Action<object> execute, Func<object, bool> canExecute = null)
         {
-            this.execute = execute;
-            this.canExecute = canExecute;
+            if (execute == null)
+            {
+                throw new ArgumentNullException("execute");
+            }
+            this.executeAction = execute;
+            this.canExecutePredicate = canExecute;
         }
-
-        public bool CanExecute(object parameter)
-        {
-            return this.canExecute == null || this.canExecute(parameter);
-        }
-
         public void Execute(object parameter)
         {
-            this.execute(parameter);
+            executeAction(parameter);
         }
+        public bool CanExecute(object parameter)
+        {
+            return this.canExecutePredicate == null ? true : canExecutePredicate(parameter);
+        }
+
+        
     }
 }

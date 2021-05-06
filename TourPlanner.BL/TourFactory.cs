@@ -5,7 +5,7 @@ using TourPlanner.BusinessLayer;
 
 namespace TourPlanner.BL
 {
-    public class TourFactory
+    public static class TourFactory
     {
         private static ITourFactory instance;
 

@@ -10,3 +10,15 @@ C:\Users\burak_y46me01\source\repos\TourPlanner.DAL\obj\Debug\netstandard2.0\Tou
 C:\Users\burak_y46me01\source\repos\TourPlanner.DAL\obj\Debug\netstandard2.0\TourPlanner.DAL.csproj.CopyComplete
 C:\Users\burak_y46me01\source\repos\TourPlanner.DAL\obj\Debug\netstandard2.0\TourPlanner.DAL.dll
 C:\Users\burak_y46me01\source\repos\TourPlanner.DAL\obj\Debug\netstandard2.0\TourPlanner.DAL.pdb
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.DAL\bin\Debug\netstandard2.0\TourPlanner.DAL.deps.json
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.DAL\bin\Debug\netstandard2.0\TourPlanner.DAL.dll
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.DAL\bin\Debug\netstandard2.0\TourPlanner.DAL.pdb
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.DAL\bin\Debug\netstandard2.0\TourPlanner.Models.dll
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.DAL\bin\Debug\netstandard2.0\TourPlanner.Models.pdb
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.DAL\obj\Debug\netstandard2.0\TourPlanner.DAL.csprojAssemblyReference.cache
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.DAL\obj\Debug\netstandard2.0\TourPlanner.DAL.AssemblyInfoInputs.cache
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.DAL\obj\Debug\netstandard2.0\TourPlanner.DAL.AssemblyInfo.cs
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.DAL\obj\Debug\netstandard2.0\TourPlanner.DAL.csproj.CoreCompileInputs.cache
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.DAL\obj\Debug\netstandard2.0\TourPlanner.DAL.csproj.CopyComplete
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.DAL\obj\Debug\netstandard2.0\TourPlanner.DAL.dll
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.DAL\obj\Debug\netstandard2.0\TourPlanner.DAL.pdb

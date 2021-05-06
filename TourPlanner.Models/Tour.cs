@@ -6,22 +6,23 @@ namespace TourPlanner.Models
     {
         private string name;
         private string description;
-        private string route;
-        private long distance;
+        private string from;
+        private string to;
+        private string imagepath;
 
-        public Tour(string name, string description, string route, long distance)
+        public Tour(string name, string description, string from, string to, string imagepath)
         {
-            this.name = name;
-            this.description = description;
-            this.route = route;
-            this.distance = distance;
+            this.Name = name;
+            this.Description = description;
+            this.From = from;
+            this.To = to;
+            this.Imagepath = imagepath;
         }
 
         public string Name { get => name; set => name = value; }
         public string Description { get => description; set => description = value; }
-        public string Route { get => route; set => route = value; }
-        public long Distance { get => distance; set => distance = value; }
-
-
+        public string From { get => from; set => from = value; }
+        public string To { get => to; set => to = value; }
+        public string Imagepath { get => imagepath; set => imagepath = value; }
     }
 }

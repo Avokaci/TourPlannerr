@@ -7,6 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using System.Windows.Input;
+using TourPlanner.BL;
+using TourPlanner.BusinessLayer;
 using TourPlanner.Models;
 using TourPlanner.ViewModels;
 
@@ -18,7 +20,8 @@ namespace TourPlanner.Views
         private ObservableCollection<Tour> tours;
         private ObservableCollection<DataGridItem> logs;
         private Tour tour;
-        private string searchText;
+        private string searchCommand;
+        private ITourFactory tourfactory;
 
         #endregion
 
@@ -27,9 +30,9 @@ namespace TourPlanner.Views
         {
             get
             {
-                if (searchText == null) return tours;
+                if (searchCommand == null) return tours;
 
-                return tours.Where(x => x.Name.ToUpper().StartsWith(searchText.ToUpper()));
+                return tours.Where(x => x.Name.ToUpper().StartsWith(searchCommand.ToUpper()));
             }
         }
         public ObservableCollection<Tour> Tours { get => tours; set => tours = value; }
@@ -49,17 +52,17 @@ namespace TourPlanner.Views
                 }
             }
         }
-        public string SearchText
+        public string SearchCommand
         {
             get
             {
-                return searchText;
+                return searchCommand;
             }
             set
             {
-                if (searchText != value)
+                if (searchCommand != value)
                 {
-                    searchText = value;
+                    searchCommand = value;
                     RaisePropertyChangedEvent("SearchText");
                     RaisePropertyChangedEvent("MyFilteredItems");
                 }
@@ -75,11 +78,14 @@ namespace TourPlanner.Views
         #region Constructor
         public MainViewModel()
         {
-            Tour ex1 = new Tour("Tour-1", "Das ist route1", "Salzburg-Wien", 1250);
-            Tour ex2 = new Tour("Tour-2", "Das ist route2", "wien-Graz", 300);
-
-            tours = new ObservableCollection<Tour>() { ex1, ex2 };
+            this.tourfactory = TourFactory.GetInstance();
+            tours = new ObservableCollection<Tour>() ;
             logs = new ObservableCollection<DataGridItem>();
+            foreach (Tour item in this.tourfactory.GetItems())
+            {
+                tours.Add(item);
+            }
+          
         }
         #endregion
 
