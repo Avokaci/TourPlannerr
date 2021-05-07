@@ -5,26 +5,16 @@ using TourPlanner.Models;
 
 namespace TourPlanner.DataAccessLayer
 {
-    public enum DataType
-    {
-        Database,
-        Filesystem
-    }
 
     public class TourItemDAO
     {
         private IDataAccess dataAccess;
 
-        public TourItemDAO(DataType dataType)
+        public TourItemDAO()
         {
-            if (dataType == DataType.Database)
-            {
-                dataAccess = new Database();
-            }
-            else if (dataType == DataType.Filesystem)
-            {
-                dataAccess = new FileSystem();
-            }
+            //check with datasource to use
+            //dataAccess = new Database();
+            dataAccess = new FileSystem();
         }
 
         public string CreateImage(string from, string to, string path)

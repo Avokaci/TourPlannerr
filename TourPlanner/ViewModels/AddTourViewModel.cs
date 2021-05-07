@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 using TourPlanner.BL;
 using TourPlanner.BusinessLayer;
@@ -14,19 +15,17 @@ namespace TourPlanner.Views
     {
         #region instances
         private string tourName;
-        private string routeText;
+        private string from;
+        private string to;
         private string descriptionText;
-        private long distanceText;
         private ITourFactory tourFactory;
 
         private ICommand addCommand;
         public ICommand AddCommand => addCommand ??= new RelayCommand(AddTour);
-
-
-
         #endregion
+
         #region properties
-        public string TourName
+        public string TourName 
         {
             get
             {
@@ -41,18 +40,33 @@ namespace TourPlanner.Views
                 }
             }
         }
-        public string RouteText
+        public string From 
         {
             get
             {
-                return routeText;
+                return from;
             }
             set
             {
-                if (routeText != value)
+                if (from != value)
                 {
-                    routeText = value;
-                    RaisePropertyChangedEvent(nameof(RouteText));
+                    from = value;
+                    RaisePropertyChangedEvent(nameof(from));
+                }
+            }
+        }
+        public string To 
+        {
+            get
+            {
+                return to;
+            }
+            set
+            {
+                if (to != value)
+                {
+                    to = value;
+                    RaisePropertyChangedEvent(nameof(to));
                 }
             }
         }
@@ -67,26 +81,13 @@ namespace TourPlanner.Views
                 if (descriptionText != value)
                 {
                     descriptionText = value;
-                    RaisePropertyChangedEvent(nameof(DescriptionText));
+                    RaisePropertyChangedEvent(nameof(descriptionText));
                 }
             }
         }
 
-        public long DistanceText
-        {
-            get
-            {
-                return distanceText;
-            }
-            set
-            {
-                if (distanceText != value)
-                {
-                    distanceText = value;
-                    RaisePropertyChangedEvent(nameof(DescriptionText));
-                }
-            }
-        }
+
+
         #endregion
         #region constructor
         public AddTourViewModel()
@@ -98,14 +99,13 @@ namespace TourPlanner.Views
         #region methods
         private void AddTour(object commandParameter)
         {
-
-            this.tourFactory.AddTour(TourName, RouteText, DescriptionText, DistanceText);
-
-
-            TourName = "";
-            RouteText = "";
-            DescriptionText = "";
-            DistanceText = 0;
+            this.tourFactory.AddTour(TourName, From, To, DescriptionText,"");
+            var window = (Window)commandParameter;
+            tourName = string.Empty;
+            from = string.Empty;
+            to = string.Empty;
+            descriptionText = string.Empty;
+            window.Close();
 
         }
         #endregion

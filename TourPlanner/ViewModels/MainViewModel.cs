@@ -93,6 +93,7 @@ namespace TourPlanner.Views
         private void OpenAddTourWindow(object commandParameter)
         {
             AddTourWindow atw = new AddTourWindow();
+            atw.DataContext = new AddTourViewModel();
             atw.ShowDialog();
         }
         #endregion

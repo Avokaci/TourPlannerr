@@ -11,13 +11,13 @@ namespace TourPlanner.BL
 
     internal class TourFactoryImpl : ITourFactory
     {
-        private TourItemDAO databaseTourItemDAO = new TourItemDAO(DataType.Database);
-        private TourItemDAO filesystemTourItemDAO = new TourItemDAO(DataType.Filesystem);
+        private TourItemDAO databaseTourItemDAO;
+        private TourItemDAO filesystemTourItemDAO ;
 
         public TourFactoryImpl()
         {
-            databaseTourItemDAO = new TourItemDAO(DataType.Database);
-            filesystemTourItemDAO = new TourItemDAO(DataType.Filesystem);
+            databaseTourItemDAO = new TourItemDAO();
+            filesystemTourItemDAO = new TourItemDAO();
         }
 
         public void AddLog(string tourName, DateTime date, DateTime duration, long distance, string comment)
@@ -54,7 +54,7 @@ namespace TourPlanner.BL
             return databaseTourItemDAO.GetItems();
         }
 
-        public List<TourLog> GetLogs(string tourName)
+        public IEnumerable<TourLog> GetLogs(string tourName)
         {
             return databaseTourItemDAO.GetLogs(tourName);
         }

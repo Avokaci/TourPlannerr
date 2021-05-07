@@ -14,7 +14,7 @@ namespace TourPlanner.BusinessLayer
         public void ModifyTour(Tour currentTour, string name, string from, string to, string description, string imagePath);
 
         //log
-        public List<TourLog> GetLogs(string tourName);
+        IEnumerable<TourLog> GetLogs(string tourName);
         public void AddLog(string tourName, DateTime date, DateTime duration, long distance, string comment);
         public void DeleteLog(string tourName);
 

@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "YXZVQlvavFuuLU4qM84za07SdQv+MfiEZMVhAI+mczu4HpFth1XkMjhLgMPUQhqgM3ShjGkbamIpqKon8wTHtg==",
+  "dgSpecHash": "t/cF0QjItnaHRgww6xzeoc+5H98LakSNZkw826n2MtRyviWx1Y+WPosxGSJLASMBgz38aAKGh9HQTZgP2L9fZQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\burak_y46me01\\OneDrive\\Desktop\\TourPlannerr\\TourPlanner.DAL\\TourPlanner.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\burak_y46me01\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\burak_y46me01\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\burak_y46me01\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\burak_y46me01\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }
