@@ -5,15 +5,15 @@ using TourPlanner.BusinessLayer;
 
 namespace TourPlanner.BL
 {
-    public static class TourFactory
+    public static class TourPlannerFactory
     {
-        private static ITourFactory instance;
+        private static ITourPlannerFactory instance;
 
-        public static ITourFactory GetInstance()
+        public static ITourPlannerFactory GetInstance()
         {
             if (instance == null)
             {
-                instance = new TourFactoryImpl();
+                instance = new TourPlannerFactoryImpl();
             }
             return instance;
         }

@@ -18,7 +18,7 @@ namespace TourPlanner.Views
         private string from;
         private string to;
         private string descriptionText;
-        private ITourFactory tourFactory;
+        private ITourPlannerFactory tourFactory;
 
         private ICommand addCommand;
         public ICommand AddCommand => addCommand ??= new RelayCommand(AddTour);
@@ -92,7 +92,7 @@ namespace TourPlanner.Views
         #region constructor
         public AddTourViewModel()
         {
-            this.tourFactory = TourFactory.GetInstance();
+            this.tourFactory = TourPlannerFactory.GetInstance();
 
         }
         #endregion

@@ -21,7 +21,7 @@ namespace TourPlanner.Views
         private ObservableCollection<DataGridItem> logs;
         private Tour tour;
         private string searchCommand;
-        private ITourFactory tourfactory;
+        private ITourPlannerFactory tourfactory;
 
         #endregion
 
@@ -78,7 +78,7 @@ namespace TourPlanner.Views
         #region Constructor
         public MainViewModel()
         {
-            this.tourfactory = TourFactory.GetInstance();
+            this.tourfactory = TourPlannerFactory.GetInstance();
             tours = new ObservableCollection<Tour>() ;
             logs = new ObservableCollection<DataGridItem>();
             foreach (Tour item in this.tourfactory.GetItems())

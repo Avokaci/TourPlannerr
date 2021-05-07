@@ -1,0 +1,4 @@
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.DAL.PostgreSQLServer\bin\Debug\netstandard2.0\TourPlanner.DAL.PostgreSQLServer.deps.json
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.DAL.PostgreSQLServer\bin\Debug\netstandard2.0\TourPlanner.DAL.PostgreSQLServer.dll
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.DAL.PostgreSQLServer\obj\Debug\netstandard2.0\TourPlanner.DAL.PostgreSQLServer.AssemblyInfoInputs.cache
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.DAL.PostgreSQLServer\obj\Debug\netstandard2.0\TourPlanner.DAL.PostgreSQLServer.AssemblyInfo.cs

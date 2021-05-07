@@ -5,13 +5,17 @@ VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TourPlanner.Ui", "TourPlanner.Ui.csproj", "{E3D2EA0C-5151-4F9B-9055-6445C9A4F586}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TourPlanner.Tests", "..\TourPlanner.Tests\TourPlanner.Tests.csproj", "{9314654F-4146-40B7-8E78-5E330B890DEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TourPlanner.Tests", "..\TourPlanner.Tests\TourPlanner.Tests.csproj", "{9314654F-4146-40B7-8E78-5E330B890DEC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TourPlanner.BL", "..\TourPlanner.BL\TourPlanner.BL.csproj", "{666AAA38-0F31-4658-980B-50F5947D8F0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TourPlanner.BL", "..\TourPlanner.BL\TourPlanner.BL.csproj", "{666AAA38-0F31-4658-980B-50F5947D8F0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TourPlanner.DAL", "..\TourPlanner.DAL\TourPlanner.DAL.csproj", "{1DC22AD1-FCCF-4385-9E6F-40E224F3C335}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TourPlanner.DAL", "..\TourPlanner.DAL\TourPlanner.DAL.csproj", "{1DC22AD1-FCCF-4385-9E6F-40E224F3C335}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TourPlanner.Models", "..\TourPlanner.Models\TourPlanner.Models.csproj", "{A15D98FC-4211-43D0-A0AE-963FC99FFCC4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TourPlanner.Models", "..\TourPlanner.Models\TourPlanner.Models.csproj", "{A15D98FC-4211-43D0-A0AE-963FC99FFCC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TourPlanner.DAL.PostgreSQLServer", "..\TourPlanner.DAL.PostgreSQLServer\TourPlanner.DAL.PostgreSQLServer.csproj", "{1F2B5466-BB4C-4EC7-BC3E-49A3CF777FAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TourPlanner.DAL.FileServer", "..\TourPlanner.DAL.FileServer\TourPlanner.DAL.FileServer.csproj", "{3C0668B4-7E14-4A05-9921-6B5B6FA80491}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{A15D98FC-4211-43D0-A0AE-963FC99FFCC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A15D98FC-4211-43D0-A0AE-963FC99FFCC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A15D98FC-4211-43D0-A0AE-963FC99FFCC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F2B5466-BB4C-4EC7-BC3E-49A3CF777FAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F2B5466-BB4C-4EC7-BC3E-49A3CF777FAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F2B5466-BB4C-4EC7-BC3E-49A3CF777FAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F2B5466-BB4C-4EC7-BC3E-49A3CF777FAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C0668B4-7E14-4A05-9921-6B5B6FA80491}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C0668B4-7E14-4A05-9921-6B5B6FA80491}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C0668B4-7E14-4A05-9921-6B5B6FA80491}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C0668B4-7E14-4A05-9921-6B5B6FA80491}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
