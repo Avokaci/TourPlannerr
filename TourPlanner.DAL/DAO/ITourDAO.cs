@@ -9,7 +9,7 @@ namespace TourPlanner.DAL.DAO
     {
         Tour FindById(int id);
 
-        Tour AddNewItem(string name, string tourDescription, string tourDistance, string from, string to, string routeInformation);
+        Tour AddNewItem(string name, string description, string from, string to, string routeInformation, double distance);
         IEnumerable<Tour> GetTours();
     }
 }

@@ -9,7 +9,6 @@ C:\Users\burak_y46me01\source\repos\TourPlanner.Models\obj\Debug\netstandard2.0\
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.Models\bin\Debug\netstandard2.0\TourPlanner.Models.deps.json
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.Models\bin\Debug\netstandard2.0\TourPlanner.Models.dll
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.Models\bin\Debug\netstandard2.0\TourPlanner.Models.pdb
-C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.Models\obj\Debug\netstandard2.0\TourPlanner.Models.csprojAssemblyReference.cache
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.Models\obj\Debug\netstandard2.0\TourPlanner.Models.AssemblyInfoInputs.cache
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.Models\obj\Debug\netstandard2.0\TourPlanner.Models.AssemblyInfo.cs
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.Models\obj\Debug\netstandard2.0\TourPlanner.Models.csproj.CoreCompileInputs.cache

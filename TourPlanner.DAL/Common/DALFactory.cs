@@ -54,7 +54,7 @@ namespace TourPlanner.DAL.Common
             return Activator.CreateInstance(dbClass, new object[] { connectionString }) as IDatabase;
         }
 
-        public static ITourDAO CreateTourDAO()
+        public static ITourDAO CreateTourItemDAO()
         {
             string className = assemblyName + ".TourPostgresDAO";
             if (useFileSystem)
@@ -65,7 +65,7 @@ namespace TourPlanner.DAL.Common
 
             return Activator.CreateInstance(tourType) as ITourDAO;
         }
-        public static ILogDAO CreateLogDAO()
+        public static ILogDAO CreateTourLogDAO()
         {
             string className = assemblyName + ".LogPostgresDAO";
             if (useFileSystem)

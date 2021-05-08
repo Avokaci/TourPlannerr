@@ -26,3 +26,5 @@ C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.BL\obj\Debug\ne
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.BL\obj\Debug\netstandard2.0\TourPlanner.BL.csproj.CopyComplete
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.BL\obj\Debug\netstandard2.0\TourPlanner.BL.dll
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.BL\obj\Debug\netstandard2.0\TourPlanner.BL.pdb
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.BL\bin\Debug\netstandard2.0\TourPlanner.DAL.PostgreSQLServer.dll
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.BL\bin\Debug\netstandard2.0\TourPlanner.DAL.PostgreSQLServer.pdb

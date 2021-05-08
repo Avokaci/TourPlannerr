@@ -2,3 +2,13 @@ C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.DAL.PostgreSQLS
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.DAL.PostgreSQLServer\bin\Debug\netstandard2.0\TourPlanner.DAL.PostgreSQLServer.dll
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.DAL.PostgreSQLServer\obj\Debug\netstandard2.0\TourPlanner.DAL.PostgreSQLServer.AssemblyInfoInputs.cache
 C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.DAL.PostgreSQLServer\obj\Debug\netstandard2.0\TourPlanner.DAL.PostgreSQLServer.AssemblyInfo.cs
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.DAL.PostgreSQLServer\obj\Debug\netstandard2.0\TourPlanner.DAL.PostgreSQLServer.csprojAssemblyReference.cache
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.DAL.PostgreSQLServer\obj\Debug\netstandard2.0\TourPlanner.DAL.PostgreSQLServer.csproj.CoreCompileInputs.cache
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.DAL.PostgreSQLServer\bin\Debug\netstandard2.0\TourPlanner.DAL.PostgreSQLServer.pdb
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.DAL.PostgreSQLServer\bin\Debug\netstandard2.0\TourPlanner.DAL.dll
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.DAL.PostgreSQLServer\bin\Debug\netstandard2.0\TourPlanner.Models.dll
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.DAL.PostgreSQLServer\bin\Debug\netstandard2.0\TourPlanner.DAL.pdb
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.DAL.PostgreSQLServer\bin\Debug\netstandard2.0\TourPlanner.Models.pdb
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.DAL.PostgreSQLServer\obj\Debug\netstandard2.0\TourPlanner.DAL.PostgreSQLServer.csproj.CopyComplete
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.DAL.PostgreSQLServer\obj\Debug\netstandard2.0\TourPlanner.DAL.PostgreSQLServer.dll
+C:\Users\burak_y46me01\OneDrive\Desktop\TourPlannerr\TourPlanner.DAL.PostgreSQLServer\obj\Debug\netstandard2.0\TourPlanner.DAL.PostgreSQLServer.pdb

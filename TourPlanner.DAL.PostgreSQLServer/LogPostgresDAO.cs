@@ -12,35 +12,40 @@ namespace TourPlanner.DAL.PostgreSQLServer
 {
     class LogPostgresDAO : ILogDAO
     {
-        private const string SQL_FIND_BY_ID = "SELECT * FROM public.\"Logs\" WHERE \"id\" = @id;";
-        private const string SQL_FIND_BY_TOUR_ID = "SELECT * FROM public.\"Logs\" " +
-            "WHERE \"tour_id\" = @tourId;";
-        private const string SQL_INSERT_NEW_LOG = "INSERT INTO public.\"Logs\"(report, rating, author, trip_start, trip_end, publishing_date, tour_id)" +
-            "VALUES(@report, @rating, @author, @trip_start, @trip_end, @publishing_date, @tour_id);";
+        private const string SQL_FIND_BY_ID = "SELECT * FROM public.\"TourLogs\" WHERE \"id\" = @id;";
+        private const string SQL_FIND_BY_TOUR_ID = "SELECT * FROM public.\"TourLogs\" " +
+            "WHERE \"tourId\" = @tourId;";
+        private const string SQL_INSERT_NEW_LOG = "INSERT INTO public.\"TourLogs\"" +
+            "(tourId, date, totalTime, report,  distance,  rating, averageSpeed,  maxSpeed,  minSpeed,  averageStepCount,  burntCalories)" +
+            "VALUES(@tourId, @date, @totalTime, @report, @distance, @rating, @averageSpeed,@maxSpeed,@minSpeed,@averageStepCount,@burntCalories);";
 
         private IDatabase database;
         private DAO.ITourDAO tourDAO;
         public LogPostgresDAO()
         {
             this.database = DALFactory.GetDatabase();
-            this.tourDAO = DALFactory.CreateTourDAO();
+            this.tourDAO = DALFactory.CreateTourItemDAO();
         }
         public LogPostgresDAO(IDatabase database, DAO.ITourDAO tourDAO)
         {
             this.database = database;
             this.tourDAO = tourDAO;
         }
-        public TourLog AddNewItemLog(DateTime publishingDate, string author, DateTime tripStart, DateTime tripEnd, Rating rating, string report, Tour tourItem)
+        public TourLog AddNewItemLog(Tour tourLogItem, string date, string totalTime, string report, double distance, int rating,
+            int averageSpeed, int maxSpeed, int minSpeed, int averageStepCount, int burntCalories)
         {
-            //(@report, @rating, @author, @id, @trip_start, @trip_end, @publishing_date, @tour_id
             DbCommand insertCommand = database.CreateCommand(SQL_INSERT_NEW_LOG);
+            database.DefineParameter(insertCommand, "@tourId", DbType.Int32, tourLogItem.Id);
+            database.DefineParameter(insertCommand, "@date", DbType.String, date);
+            database.DefineParameter(insertCommand, "@totalTime", DbType.String, totalTime);
             database.DefineParameter(insertCommand, "@report", DbType.String, report);
-            database.DefineParameter(insertCommand, "@author", DbType.String, author);
-            database.DefineParameter(insertCommand, "@trip_start", DbType.String, tripStart.ToString());
-            database.DefineParameter(insertCommand, "@trip_end", DbType.String, tripEnd.ToString());
-            database.DefineParameter(insertCommand, "@publishing_date", DbType.String, publishingDate.ToString());
-            database.DefineParameter(insertCommand, "@rating", DbType.Int32, (int)rating);
-            database.DefineParameter(insertCommand, "@tour_id", DbType.Int32, tourItem.Id);
+            database.DefineParameter(insertCommand, "@distance", DbType.Double, distance.ToString()); 
+            database.DefineParameter(insertCommand, "@rating", DbType.Int32, rating);
+            database.DefineParameter(insertCommand, "@averageSpeed", DbType.Int32, averageSpeed);
+            database.DefineParameter(insertCommand, "@maxSpeed", DbType.Int32, maxSpeed);
+            database.DefineParameter(insertCommand, "@minSpeed", DbType.Int32, minSpeed);
+            database.DefineParameter(insertCommand, "@averageStepCount", DbType.Int32,averageStepCount);
+            database.DefineParameter(insertCommand, "@burntCalories", DbType.Int32, burntCalories);
 
             return FindById(database.ExecuteScalar(insertCommand));
         }
@@ -69,17 +74,20 @@ namespace TourPlanner.DAL.PostgreSQLServer
             {
                 while (reader.Read())
                 {
-                    //report, rating, author, \"id\", trip_start, trip_end, publishing_date, tour_id
                     logList.Add(new TourLog(
                         (int)reader["id"],
-                        DateTime.Parse(reader["publishing_date"].ToString()),
-                        (string)reader["author"],
-                        DateTime.Parse(reader["trip_start"].ToString()),
-                        DateTime.Parse(reader["trip_end"].ToString()),
-                        (Rating)reader["rating"],
+                        tourDAO.FindById((int)reader["tourId"]),
+                        (string)reader["date"],
+                        (string)reader["totalTime"],
                         (string)reader["report"],
-                        tourDAO.FindById((int)reader["tour_id"])
-                        ));
+                        (double)reader["distance"],
+                        (int)reader["rating"],
+                        (int)reader["averageSpeed"],
+                        (int)reader["maxSpeed"],
+                        (int)reader["minSpeed"],
+                        (int)reader["averageStepCount"],
+                        (int)reader["burntCalories"])
+                        );
                 }
             }
             return logList;

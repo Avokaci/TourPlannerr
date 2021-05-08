@@ -8,10 +8,10 @@ namespace TourPlanner.Models
     {
         private int id;
         private Tour tourLogItem;
-        private DateTime date;
-        private DateTime totalTime;
+        private string date;
+        private string totalTime;
         private string report;
-        private long distance;
+        private double distance;
         private int rating;
         //additional properties
         private int averageSpeed;
@@ -20,8 +20,7 @@ namespace TourPlanner.Models
         private int averageStepCount;
         private int burntCalories;
 
-        public TourLog(int id, Tour tourLogItem, DateTime date, 
-            DateTime totalTime, string report, long distance, 
+        public TourLog(int id, Tour tourLogItem, string date, string totalTime, string report, double distance, 
             int rating, int averageSpeed, int maxSpeed, int minSpeed, int averageStepCount, int burntCalories)
         {
             this.id = id;
@@ -40,10 +39,10 @@ namespace TourPlanner.Models
 
         public int Id { get => id; set => id = value; }
         public Tour TourLogItem { get => tourLogItem; set => tourLogItem = value; }
-        public DateTime Date { get => date; set => date = value; }
-        public DateTime TotalTime { get => totalTime; set => totalTime = value; }
+        public string Date { get => date; set => date = value; }
+        public string TotalTime { get => totalTime; set => totalTime = value; }
         public string Report { get => report; set => report = value; }
-        public long Distance { get => distance; set => distance = value; }
+        public double Distance { get => distance; set => distance = value; }
         public int Rating { get => rating; set => rating = value; }
         public int AverageSpeed { get => averageSpeed; set => averageSpeed = value; }
         public int MaxSpeed { get => maxSpeed; set => maxSpeed = value; }

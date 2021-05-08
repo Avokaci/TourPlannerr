@@ -19,9 +19,26 @@ namespace TourPlanner.Views
         #region Instances
         private ObservableCollection<Tour> tours;
         private ObservableCollection<DataGridItem> logs;
-        private Tour tour;
+        private Tour currentItem;
         private string searchCommand;
-        private ITourPlannerFactory tourfactory;
+        private ICommand randomGenerateItemCommand;
+        private ICommand randomGenerateLogCommand;
+        private ICommand popUpAdd;
+
+        private ITourPlannerFactory tourPlannerFactory;
+        public ICommand PopUpAdd => popUpAdd ??= new RelayCommand(OpenAddTourWindow);
+        public ICommand RandomGenerateItemCommand => randomGenerateItemCommand ??= new RelayCommand(RandomGenerateItem);
+        public ICommand RandomGenerateLogCommand => randomGenerateItemCommand ??= new RelayCommand(RandomGenerateLog);
+
+        private void RandomGenerateItem(object commandParameter)
+        {
+            Tour generatedItem = tourPlannerFactory.CreateTour("", "", "", "", "", 0);
+            tours.Add(generatedItem);
+        }
+        private void RandomGenerateLog(object commandParameter)
+        {
+            TourLog generatedLog = tourPlannerFactory.CreateTourLog(CurrentItem, "", "", "", 0, 0, 0, 0, 0, 0, 0);
+        }
 
         #endregion
 
@@ -37,18 +54,18 @@ namespace TourPlanner.Views
         }
         public ObservableCollection<Tour> Tours { get => tours; set => tours = value; }
         public ObservableCollection<DataGridItem> Logs { get => logs; set => logs = value; }
-        public Tour Tour
+        public Tour CurrentItem
         {
             get
             {
-                return tour;
+                return currentItem;
             }
             set
             {
-                if ((tour != value) && (value != null))
+                if ((currentItem != value) && (value != null))
                 {
-                    tour = value;
-                    RaisePropertyChangedEvent(nameof(tour));
+                    currentItem = value;
+                    RaisePropertyChangedEvent(nameof(currentItem));
                 }
             }
         }
@@ -69,8 +86,7 @@ namespace TourPlanner.Views
             }
         }
 
-        private ICommand popUpAdd;
-        public ICommand PopUpAdd => popUpAdd ??= new RelayCommand(OpenAddTourWindow);
+       
 
 
         #endregion
@@ -78,10 +94,10 @@ namespace TourPlanner.Views
         #region Constructor
         public MainViewModel()
         {
-            this.tourfactory = TourPlannerFactory.GetInstance();
+            this.tourPlannerFactory = TourPlannerFactory.GetInstance();
             tours = new ObservableCollection<Tour>() ;
             logs = new ObservableCollection<DataGridItem>();
-            foreach (Tour item in this.tourfactory.GetItems())
+            foreach (Tour item in this.tourPlannerFactory.GetTours())
             {
                 tours.Add(item);
             }

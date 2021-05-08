@@ -8,8 +8,9 @@ namespace TourPlanner.DAL.Common
 {
     public interface IFileAccess
     {
-        int CreateNewTourFile(string name, string tourDescription, string tourDistance, string from, string to, string routeInformation);
-        int CreateNewLogFile(DateTime publishingDate, string author, DateTime tripStart, DateTime tripEnd, Rating rating, string report, Tour tourItem);
+        int CreateNewTourFile(string name, string description, string from, string to, string routeInformation, double distance);
+        int CreateNewLogFile(Tour tourLogItem, string date, string totalTime, string report, double distance, int rating,
+            int averageSpeed, int maxSpeed, int minSpeed, int averageStepCount, int burntCalories);
         IEnumerable<FileInfo> SearchFiles(string searchTerm, MediaType searchType);
 
         IEnumerable<FileInfo> GetAllFiles(MediaType searchType);

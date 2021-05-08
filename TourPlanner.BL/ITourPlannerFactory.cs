@@ -10,8 +10,9 @@ namespace TourPlanner.BusinessLayer
         IEnumerable<TourLog> GetLogs(Tour item);
         IEnumerable<Tour> Search(string itemName, bool caseSensitive = false);
 
-        Tour CreateTour(string name, string tourDescription, string tourDistance, string from, string to, string routeInformation);
+        Tour CreateTour(string name, string description, string from, string to, string routeInformation, double distance);
 
-        TourLog CreateLog(DateTime publishingDate, string author, DateTime tripStart, DateTime tripEnd, Rating rating, string report, Tour tourItem);
+        TourLog CreateTourLog(Tour tourLogItem, string date, string totalTime, string report, double distance, int rating,
+            int averageSpeed, int maxSpeed, int minSpeed, int averageStepCount, int burntCalories);
     }
 }

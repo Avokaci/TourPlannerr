@@ -14,8 +14,13 @@ namespace TourPlanner.BL
     {
         public IEnumerable<Tour> GetTours()
         {
-            ITourDAO tourDAO = DALFactory.CreateTourDAO();
+            ITourDAO tourDAO = DALFactory.CreateTourItemDAO();
             return tourDAO.GetTours();
+        }
+        public IEnumerable<TourLog> GetLogs(Tour item)
+        {
+            ILogDAO logDAO = DALFactory.CreateTourLogDAO();
+            return logDAO.GetLogsForTour(item);
         }
 
         public IEnumerable<Tour> Search(string itemName, bool caseSensitive = false)
@@ -32,22 +37,19 @@ namespace TourPlanner.BL
             }
         }
 
-        public Tour CreateTour(string name, string tourDescription, string tourDistance, string from, string to, string routeInformation)
+        public Tour CreateTour(string name, string description, string from, string to, string routeInformation, double distance)
         {
-            ITourDAO tourDAO = DALFactory.CreateTourDAO();
-            return tourDAO.AddNewItem(name, tourDescription, tourDistance, from, to, routeInformation);
+            ITourDAO tourDAO = DALFactory.CreateTourItemDAO();
+            return tourDAO.AddNewItem(name, description, from, to, routeInformation, distance);
         }
 
-        public TourLog CreateLog(DateTime publishingDate, string author, DateTime tripStart, DateTime tripEnd, Rating rating, string report, Tour tourItem)
+        public TourLog CreateTourLog(Tour tourLogItem, string date, string totalTime, string report, double distance, int rating,
+            int averageSpeed, int maxSpeed, int minSpeed, int averageStepCount, int burntCalories)
         {
-            ILogDAO logDAO = DALFactory.CreateLogDAO();
-            return logDAO.AddNewItemLog(publishingDate, author, tripStart, tripEnd, rating, report, tourItem);
+            ILogDAO logDAO = DALFactory.CreateTourLogDAO();
+            return logDAO.AddNewItemLog(tourLogItem, date, totalTime, report, distance, rating, averageSpeed, maxSpeed, minSpeed, averageStepCount, burntCalories);
         }
 
-        public IEnumerable<TourLog> GetLogs(Tour item)
-        {
-            ILogDAO logDAO = DALFactory.CreateLogDAO();
-            return logDAO.GetLogsForTour(item);
-        }
+       
     }
 }

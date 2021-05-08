@@ -10,9 +10,9 @@ namespace TourPlanner.Models
         private string from;
         private string to;
         private string routeInformation;
-        private long distance;
+        private double distance;
 
-        public Tour(int id, string name, string description, string from, string to, string routeInformation, long distance)
+        public Tour(int id, string name, string description, string from, string to, string routeInformation, double distance)
         {
             this.id = id;
             this.name = name;
@@ -29,6 +29,6 @@ namespace TourPlanner.Models
         public string From { get => from; set => from = value; }
         public string To { get => to; set => to = value; }
         public string RouteInformation { get => routeInformation; set => routeInformation = value; }
-        public long Distance { get => distance; set => distance = value; }
+        public double Distance { get => distance; set => distance = value; }
     }
 }

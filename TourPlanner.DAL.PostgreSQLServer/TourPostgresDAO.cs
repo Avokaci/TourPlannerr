@@ -14,8 +14,9 @@ namespace TourPlanner.DAL.PostgreSQLServer
     {
         private const string SQL_FIND_BY_ID = "SELECT * FROM public.\"Tour\" WHERE \"id\" = @id;";
         private const string SQL_GET_ALL_ITEMS = "SELECT * FROM public.\"Tour\"";
-        private const string SQL_INSERT_NEW_ITEM = "INSERT INTO public.\"Tour\"(name, tour_description, route_information, tour_distance, \"from\", \"to\") " +
-            "VALUES(@name, @tour_description, @route_information, @tour_distance, @from, @to) " +
+        private const string SQL_INSERT_NEW_ITEM = "INSERT INTO public.\"Tour\"" +
+            "(name, description, from, to, routeInformation, distance) " +
+            "VALUES(@name, @description, @from, @to, @routeInformation, @distance) " +
             "RETURNING \"id\";";
 
 
@@ -29,15 +30,15 @@ namespace TourPlanner.DAL.PostgreSQLServer
         {
             this.database = database;
         }
-        public Tour AddNewItem(string name, string tourDescription, string tourDistance, string from, string to, string routeInformation)
+        public Tour AddNewItem(string name, string description, string from, string to, string routeInformation, double distance)
         {
             DbCommand insertCommand = database.CreateCommand(SQL_INSERT_NEW_ITEM);
             database.DefineParameter(insertCommand, "@name", DbType.String, name);
-            database.DefineParameter(insertCommand, "@tour_description", DbType.String, tourDescription);
-            database.DefineParameter(insertCommand, "@route_information", DbType.String, routeInformation);
-            database.DefineParameter(insertCommand, "@tour_distance", DbType.String, tourDistance.ToString());
+            database.DefineParameter(insertCommand, "@description", DbType.String, description);
             database.DefineParameter(insertCommand, "@from", DbType.String, from);
             database.DefineParameter(insertCommand, "@to", DbType.String, to);
+            database.DefineParameter(insertCommand, "@routeInformation", DbType.String, routeInformation);
+            database.DefineParameter(insertCommand, "@distance", DbType.Double, distance);
 
             return FindById(database.ExecuteScalar(insertCommand));
         }
@@ -46,11 +47,11 @@ namespace TourPlanner.DAL.PostgreSQLServer
         {
             DbCommand insertCommand = database.CreateCommand(SQL_INSERT_NEW_ITEM);
             database.DefineParameter(insertCommand, "@name", DbType.String, tourReference.Name);
-            database.DefineParameter(insertCommand, "@tour_description", DbType.String, tourReference.TourDescription);
-            database.DefineParameter(insertCommand, "@route_information", DbType.String, tourReference.RouteInformation);
-            database.DefineParameter(insertCommand, "@tour_distance", DbType.String, tourReference.TourDistance);
+            database.DefineParameter(insertCommand, "@description", DbType.String, tourReference.Description);
             database.DefineParameter(insertCommand, "@from", DbType.String, tourReference.From);
             database.DefineParameter(insertCommand, "@to", DbType.String, tourReference.To);
+            database.DefineParameter(insertCommand, "@routeInformation", DbType.String, tourReference.RouteInformation);
+            database.DefineParameter(insertCommand, "@distance", DbType.Double, tourReference.Distance);
 
             return FindById(database.ExecuteScalar(insertCommand));
         }
@@ -66,10 +67,8 @@ namespace TourPlanner.DAL.PostgreSQLServer
         public IEnumerable<Tour> GetTours()
         {
             DbCommand toursCommand = database.CreateCommand(SQL_GET_ALL_ITEMS);
-            //query tours from database
             return QueryToursFromDatabase(toursCommand);
         }
-        //name, tour_description, route_information, tour_distance, \"from\", \"to\"
         private IEnumerable<Tour> QueryToursFromDatabase(DbCommand command)
         {
             List<Tour> tourList = new List<Tour>();
@@ -80,11 +79,11 @@ namespace TourPlanner.DAL.PostgreSQLServer
                     tourList.Add(new Tour(
                         (int)reader["id"],
                         (string)reader["name"],
-                        (string)reader["tour_description"],
-                        (string)reader["tour_distance"],
+                        (string)reader["description"],
                         (string)reader["from"],
                         (string)reader["to"],
-                        (string)reader["route_information"]
+                        (string)reader["routeInformation"],
+                        (double)reader["distance"]
                         ));
                 }
             }
